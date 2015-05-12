@@ -1,0 +1,14 @@
+
+Procedural Terrain
+==================
+
+Contains a static ProceduralTerrain class for building Unity Terrain's with
+a bump mapped basemap texture (no detail maps).
+
+The ProceduralTerrain class also includes functionality for building a Texture2D
+normalmap from a 2d array of surface heights. 
+
+The class a static method for reading a single channel 32bit 
+Geotiff to a 2d array of floats.
+
+See the ProceduralTerrain\Tests\tests.unity scene for usage.
