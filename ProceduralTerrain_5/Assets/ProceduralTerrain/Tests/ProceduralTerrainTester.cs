@@ -11,11 +11,11 @@ public class ProceduralTerrainTester : MonoBehaviour
     public float xres = 2.5f;
     public float yres = 2.5f;
 
-    void Start()
+    public void CreateTerrain()
     {
         var htmap = ProceduralTerrain.Read32BitTiff(dem_fname);
         var basemap = (Texture2D)Resources.Load(basmap_fname, typeof(Texture2D));
-        var normal = ProceduralTerrain.GenerateNormalMap(htmap, xres, yres);
+        Texture2D normal = ProceduralTerrain.GenerateNormalMap(htmap, xres, yres);
 
         ProceduralTerrain.BuildTerrain(htmap, xres, yres, basemap, normal);
     }
